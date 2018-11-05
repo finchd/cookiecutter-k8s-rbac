@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aws-auth
+  namespace: kube-system
+data:
+  mapRoles: |
+    {% for role in cookiecutter.use_iam_roles %}
+    - rolearn: {{ role }}
+      groups:
+        - {{ cookiecutter.rolebinding_name }}
+    {% endfor %}
+  mapUsers: |
+    {%  for user in cookiecutter.aws_iam_users %}
+    - userarn: {{ user }}
+      groups:
+        - {{ cookiecutter.rolebinding_name }}
+    {% endfor %}

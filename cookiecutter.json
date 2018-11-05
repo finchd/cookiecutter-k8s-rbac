@@ -1,11 +1,11 @@
 {
-    "full_name": "Your name",
-    "email": "Your address email (eq. you@example.com)",
-    "github_username": "Your github username",
     "project_name": "Name of the project",
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
-    "project_short_description": "A short description of the project",
-    "release_date": "{% now 'local' %}",
-    "version": "0.1.0",
-    "_extensions": ["jinja2_time.TimeExtension"]
+    "rolebinding_namespace": "default",
+    "existing_role": "view|edit|admin",
+    "rolebinding_name": "{{ cookiecutter.existing_role }}-{{ cookiecutter.rolebinding_namespace.lower() }}",
+    "use_aws_iam_auth": "yes",
+    "aws_iam_role": "arn:::role/name",
+    "aws_iam_user": "arn:::user/name",
+    "non_aws_user": ""
 }

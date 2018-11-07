@@ -3,6 +3,8 @@ cookiecutter-k8s-rbac
 
 [![Build Status](https://travis-ci.com/finchd/cookiecutter-k8s-rbac.svg?branch=master)](https://travis-ci.com/finchd/cookiecutter-k8s-rbac)
 
+*IMPORTANT* For generic modification, use the CNCF templating engine [Kustomize](https://github.com/kubernetes-sigs/kustomize)
+
 [Cookiecutter](https://github.com/audreyr/cookiecutter ) template for Kubernetes RBAC Users/Groups/ServiceAccounts, Roles/ClusterRoles, etc
 
 Table of Contents
